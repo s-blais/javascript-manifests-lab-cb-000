@@ -3,6 +3,8 @@
 <head>
   <title>Admin Layout</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'admin' %> <!-- solution has this as 'application' but isn't the idea to have the admin layout pull in an additional/different manifest file? What is in quotes is not adequately explained in the lesson -->
+  <%= javascript_include_tag 'main' %> <!-- rails server does NOT like this added this way! Why are we adding it this way? -->
   <%= csrf_meta_tags %>
 </head>
 <body>
